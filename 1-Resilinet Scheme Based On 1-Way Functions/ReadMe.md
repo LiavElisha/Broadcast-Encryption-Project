@@ -4,7 +4,7 @@ By this functions clients can store O(log n) keys rathe than n+1 if the keys are
 where the pseudo-random function f output is twice the length of the input.
 More details on Amos Fiat' and Moni Naor' paper. 
 
-I wrote a fewe script in order to make it simople to use.
+I created a few scripts in order to make it simple to use - 
 compileClients.sh - Compile all client.c files.
 deleteFiles.sh - Delete all files in /client{index}/files/*
 runClients.sh {Resilient clients} - Run all clients with the input - {Number of files}. For example - runClients.sh 0 2 4

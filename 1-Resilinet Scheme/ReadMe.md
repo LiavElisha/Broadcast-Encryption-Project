@@ -3,7 +3,7 @@ The server define Ki for every user. Then, the server gives every client i all k
 The server encrypts the message by XOR the messgae with all Ki (such that i is a user which doesn't have permission see the message).
 Finally, the server transmits an share encrypted message to all members.
 
-I wrote a fewe script in order to make it simople to use.
+I ceated a few scripts in order to make it simple to use - 
 compileClients.sh - Compile all client.c files.
 deleteFiles.sh - Delete all files in /client{index}/files/*
 runClients.sh {Resilient clients} - Run all clients with the input - {Number of files}. For example - runClients.sh 0 2 4

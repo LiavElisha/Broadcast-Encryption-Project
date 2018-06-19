@@ -51,7 +51,6 @@ int server()
 {
 	unsigned char key[17];
 	createKey(key, KEYS);
-    printf("the key - %s\n", key);
     fencrypt(FILE_NAME, ENCRYPTED_FILE_NAME, (unsigned const char*)key);
 
     int listenfd = 0;
@@ -112,8 +111,8 @@ void sendDataFromFile(int connfd)
         /* First read file in chunks of 256 bytes */
         memset(sendBuff, '0', sizeof(sendBuff));
         nread = fread(sendBuff, 1, 256, fp);
-        printf("Bytes read %d \n", nread);
-        printf("%s \n", sendBuff);
+        // printf("Bytes read %d \n", nread);
+        // printf("%s \n", sendBuff);
 
         /* If read was success, send data. */
         if(nread > 0)
@@ -173,7 +172,6 @@ int getKeys(BYTE* key, BYTE* o_key1, BYTE* o_key2){
     sha256_init(&ctx);
 	sha256_update(&ctx, text, 31);
 	sha256_final(&ctx, buf);
-	// printf("strlen(text) - %d\n", strlen(text));
     
 	// Split the key (hash value) to key1 & key2
 	for (int i=0; i<16; ++i)
@@ -227,7 +225,6 @@ void setResilientByInput(int resilientsNumber, char **argv[])
         c = (char)argv[i][0];
         index = c - '0';
 		RESILIENT[index]=1;
-		printf("resilient += %d\n", index);
     }
 }
 

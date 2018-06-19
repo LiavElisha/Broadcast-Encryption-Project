@@ -16,7 +16,7 @@
 
 #define N 10
 #define KEY_LENGTH 16
-#define FILE_NAME "dataFiles/file.enc"
+#define FILE_NAME "encryptedFiles/file.enc"
 
 unsigned int RESILIENT[N] = {0};
 unsigned const char* KEYS[N] = {"1234567812345670", "1234567812345671", "1234567812345672", "1234567812345673", "1234567812345674",

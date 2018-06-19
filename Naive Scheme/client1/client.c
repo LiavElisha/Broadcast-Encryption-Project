@@ -17,6 +17,7 @@
 #include <time.h>
 
 #define ENCRYPTED_FILE_NAME "files/sample_file.enc"
+#define N 10
 
 void client();
 void recieveEncryptedDataToFile(int sockfd);
@@ -29,13 +30,13 @@ int main(int argc, char **argv[])
 {
 
 	// the client expect to get the number of files.
-	if (argc != 2)
+	if (argc < 2)
 	{
-		printf("argc has to be 2\n");
+		printf("argc has to be at least  2\n");
 		return 0;
 	}
 
-	numOfFiles = atoi(argv[1]);
+	numOfFiles = N - (argc - 1);
 	client();
 
     return 0;
